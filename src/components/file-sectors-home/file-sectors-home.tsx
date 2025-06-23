@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Buttons from "../core/buttons/buttons";
 import { Row, Col, Container } from "react-bootstrap";
 import "@/components/User-guide/User-guide.scss";
@@ -14,12 +14,15 @@ import SectorsBG5 from "../../../public/images/sector-bg.jpg";
 import SectorsBG6 from "../../../public/images/sector-bg.jpg";
 import SectorsBG7 from "../../../public/images/sector-bg.jpg";
 import SectorsBG8 from "../../../public/images/sector-bg.jpg";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation"; // ✅ Add this
+import { usePathname } from "next/navigation";
 
+// ✅ FIXED: Replaced require() with import
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SectorsHomeFile() {
-  const pathname = usePathname(); // ✅ Track current route
+  const pathname = usePathname();
   const AnimatedHeading = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -28,10 +31,6 @@ export default function SectorsHomeFile() {
     const el = AnimatedHeading.current;
     const headingEl = el.querySelector(".AnimatedHeading");
     if (!headingEl) return;
-
-    const gsap = require("gsap").gsap;
-    const ScrollTrigger = require("gsap/ScrollTrigger").ScrollTrigger;
-    gsap.registerPlugin(ScrollTrigger);
 
     const originalText =
       "Which Approval are Required to Start my Business in Selected Sectors";
@@ -70,7 +69,6 @@ export default function SectorsHomeFile() {
       }
     });
 
-    // Interactivity
     const dropdown = headingEl.querySelector(".CustomDropdown") as HTMLElement;
     const trigger = dropdown?.querySelector(".DropdownTrigger") as HTMLElement;
     const list = dropdown?.querySelector(".DropdownList") as HTMLElement;
@@ -101,7 +99,6 @@ export default function SectorsHomeFile() {
       },
     });
 
-    // Cleanup on unmount or route change
     return () => {
       trigger?.removeEventListener("click", handleClick);
       list
