@@ -1,0 +1,157 @@
+@use "../../../assets/styles/var";
+@import "../../../assets/styles/_mixin.scss";
+
+// CustomAccordion
+.CustomAccordionV2 {
+  .accordion-item {
+    margin-bottom: 20px;
+    border-radius: var.$rounded8;
+    overflow: hidden;
+    border: none;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .accordion-header {
+      .accordion-button {
+        background-color: var.$text-blue-color;
+        color: var.$black-color;
+        font-size: var(--font18);
+        font-weight: var.$font500;
+        box-shadow: none;
+        border-top-left-radius: var.$rounded8;
+        border-top-right-radius: var.$rounded8;
+        border: 1px solid;
+        border-color: var.$darkskyblue-color;
+        padding: 26px;
+        @media (max-width: 1399px) { 
+          padding: 25px; 
+        }
+        @media (max-width: 1199px) { 
+          padding: 22px; 
+        }
+        @media (max-width: 991px) { 
+          padding: 20px; 
+        }
+        @media (max-width: 767px) { 
+          padding: 20px; 
+        }
+        @media (max-width: 575px) { 
+          padding: 15px; 
+        }
+        .PDFListBox {
+          .ValidatedUpdates {
+            .Validated {
+              color: var.$white-color;
+            }
+            .Updates {
+              color: var.$BACFFF-color;
+            }
+          }
+          .Heading {
+            color: var.$white-color;
+          }
+        }
+        &:after {
+          content: "\F2E6";
+          font-family: var.$fontFamilybootstrapicon;
+          display: inline-block;
+          width: auto;
+          height: auto;
+          background-image: none;
+          position: absolute;
+          right: 26px;
+          font-size: var(--font22);
+          color: var.$pureblack-color;
+          color: var.$white-color;
+        }
+        &.collapsed {
+          border-bottom-left-radius: var.$rounded8;
+          border-bottom-right-radius: var.$rounded8;
+          border-color: var.$cccccc-color;
+          background-color: var.$white-color;
+          &:after {
+            content: "\F4FA";
+            transform: none;
+            color: var.$pureblack-color;
+          }
+          .PDFListBox {
+            .ValidatedUpdates {
+              .Validated {
+                color: var.$black-color;
+              }
+              .Updates {
+                color: var.$darkskyblue-color;
+              }
+            }
+            .Heading {
+              color: var.$black-color;
+            }
+          }
+        }
+      }
+    }
+    .accordion-body {
+      border-bottom-left-radius: var.$rounded8;
+      border-bottom-right-radius: var.$rounded8;
+      border: 1px solid;
+      border-top: none;
+      background-color: var.$EFF5FF-color;
+      border-color: var.$darkskyblue-color;
+      padding: 26px;
+      @media (max-width: 1399px) { 
+        padding: 25px; 
+      }
+      @media (max-width: 1199px) { 
+        padding: 22px; 
+      }
+      @media (max-width: 991px) { 
+        padding: 20px; 
+      }
+      @media (max-width: 767px) { 
+        padding: 20px; 
+      }
+      @media (max-width: 575px) { 
+        padding: 15px; 
+      }
+      .PDFListBox {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid;
+        border-bottom-color: var.$light80-color;
+        @media (max-width: 1199px) { 
+          padding-bottom: 25px;
+          margin-bottom: 25px;
+        }
+        @media (max-width: 575px) { 
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+        }
+        &:last-child {
+          padding-bottom: 0px;
+          margin-bottom: 0px;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .PDFListBox {
+    padding-right: 74px;
+    @media (max-width: 1399px) { 
+      padding-right: 55px;
+    }
+    @media (max-width: 1199px) {
+      padding-right: 45px;
+    }
+    @media (max-width: 767px) {
+      padding-right: 35px;
+    }
+    @media (max-width: 575px) {
+      padding-right: 35px;
+    }
+    .DownloadGroup {
+      @media (max-width: 575px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

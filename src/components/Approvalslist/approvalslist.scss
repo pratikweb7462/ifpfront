@@ -1,0 +1,98 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+.ApprovalslistBox {
+  border-bottom: 1px solid var.$light80-color;
+  margin: 0px 0px 30px;
+  padding: 0px 0px 30px;
+  transition: var.$transition2sall;
+  @media (max-width: 1399px) {
+    margin: 0px 0px 28px;
+    padding: 0px 0px 28px;
+  }
+  @media (max-width: 1199px) {
+    margin: 0px 0px 26px;
+    padding: 0px 0px 26px;
+  }
+  @media (max-width: 991px) {
+    margin: 0px 0px 25px;
+    padding: 0px 0px 25px;
+  }
+  @media (max-width: 767px) {
+    margin: 0px 0px 20px;
+    padding: 0px 0px 20px;
+  }
+  .Thumb {
+    background-color: var.$light90-color;
+    border-radius: var.$rounded15;
+    padding: 25px;
+    img{
+      max-height: 143px;
+      object-fit: contain;
+    }
+  }
+  .BtnGrp {
+    margin: -7px -7px;
+  }
+  .btn-outline {
+    margin: 7px;
+  }
+  .orange {
+    min-width: 139px;
+    @media (max-width: 1399px) {
+      min-width: 182px;
+    }
+    @media (max-width: 575px) {
+      min-width: 173px;
+    }
+  }
+  .gray {
+    min-width: 182px;
+    @media (max-width: 1399px) {
+      min-width: 182px;
+    }
+    @media (max-width: 575px) {
+      min-width: 173px;
+    }
+  }
+  .Heading {
+    margin: 0px 0px 8px;
+  }
+  .SubText {
+    color: var.$light64-color;
+    p {
+      margin: 0px 0px 30px;
+      padding: 0px;
+      @media (max-width: 1199px) {
+        margin: 0px 0px 20px;
+      }
+      @media (max-width: 767px) {
+        margin: 0px 0px 15px;
+      }
+    }
+  }
+  .Update {
+    padding-top: 6px;
+    &:before {
+      content: "\F293";
+      font-family: var.$fontFamilybootstrapicon;
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
+  .ThumbGrid {
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.ApprovalslistGrid {
+  &:last-child {
+    .ApprovalslistBox {
+      border-bottom: none;
+      margin: 0px 0px 0px;
+      padding: 0px 0px 0px;
+    }
+  }
+}

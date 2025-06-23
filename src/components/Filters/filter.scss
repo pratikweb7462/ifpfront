@@ -1,0 +1,121 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+.FilterPart {
+  @media (max-width: 1199px) {
+    padding-bottom: 40px;
+  }
+    @media (max-width: 767px) {
+    padding-bottom: 30px;
+  }
+  .CheckBoxGroup .simplebar-track.simplebar-vertical {
+    width: 5px; /* Change scrollbar width */
+    background: #e4e4e4; /* Background of the track */
+    border-radius: 8px;
+  }
+
+  /* Scrollbar thumb (the draggable part) */
+  .CheckBoxGroup .simplebar-scrollbar:before {
+    background-color: #a7a7a7; /* Thumb color */
+    border-radius: 8px;
+    width: 5px;
+    left: 0;
+  }
+
+  /* Optional: On hover, change thumb color */
+  .CheckBoxGroup .simplebar-scrollbar:hover:before {
+    background-color: green;
+  }
+  .ClearBtn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: var.$primary-color;
+    span {
+      margin-right: 7px;
+    }
+    &:hover {
+      color: var.$navyblue-color;
+    }
+  }
+  .CheckBoxGroup {
+    max-height: 698px;
+    padding-right: 58px;
+    overflow: auto;
+    @media (max-width: 1399px) {
+      padding-right: 20px;
+    }
+    @media (max-width: 1199px) {
+      max-height: 200px;
+    }
+  }
+  .CheckBoxWTitle {
+    margin: 0px 0px 50px;
+    &:last-child {
+      margin: 0px 0px 0px;
+    }
+  }
+  .FilterCheckBox {
+    margin: 0px 0px 30px;
+    @media (max-width: 1199px) {
+      margin: 0px 0px 20px;
+    }
+    &:last-child {
+      margin: 0px 0px 0px;
+    }
+  }
+  .FilterSearch {
+    margin: 0px 0px 20px;
+    padding-right: 45px;
+    @include BackgroundContain;
+    background-size: 18px;
+    background-position: 95% 50%;
+    background-image: url("../../../public/images/search-icon.svg");
+  }
+  .accordion {
+    .accordion-item {
+      border: none;
+      box-shadow: none;
+      margin: 0px 0px 50px;
+      @media (max-width: 1199px) {
+        margin: 0px 0px 30px;
+      }
+      &:last-child {
+        margin: 0px 0px 0px;
+      }
+    }
+    .accordion-header {
+      margin: 0px 0px 32px;
+      box-shadow: none;
+      border: none;
+      @media (max-width: 1199px) {
+        margin: 0px 0px 22px;
+      }
+      .accordion-button {
+        background-color: transparent;
+        border: none;
+        color: var.$black-color;
+        font-size: var(--font20);
+        font-weight: var.$font700;
+        padding: 0px;
+        box-shadow: none;
+        &:focus {
+          box-shadow: none;
+        }
+        &:after {
+          width: auto;
+          height: auto;
+          background: none;
+          content: "\F282";
+          font-family: var.$fontFamilybootstrapicon;
+          font-size: 16px;
+        }
+      }
+    }
+    .accordion-body {
+      padding: 0px;
+      box-shadow: none;
+      border: none;
+    }
+  }
+}

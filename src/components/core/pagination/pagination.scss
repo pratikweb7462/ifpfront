@@ -1,0 +1,82 @@
+@use "../../../assets/styles/var";
+@import "../../../assets/styles/_mixin.scss";
+
+.PaginationBox {
+  margin: 54px 0px 0px;
+  @media (max-width: 1399px) {
+    margin: 44px 0px 0px;
+  }
+  @media (max-width: 1199px) {
+    margin: 34px 0px 0px;
+  }
+  @media (max-width: 991px) {
+    margin: 24px 0px 0px;
+  }
+  @media (max-width: 767px) {
+    margin: 20px 0px 0px;
+  }
+}
+.pagination {
+  margin: -7px;
+  @media (max-width: 1199px) {
+    margin: -5px;
+  }
+  @media (max-width: 575px) {
+    margin: -3px;
+  }
+  li.page-item {
+    margin: 7px;
+    @media (max-width: 1199px) {
+      margin: 5px;
+    }
+    @media (max-width: 575px) {
+      margin: 3px;
+    }
+    .page-link {
+      font-size: var(--font14);
+      background-color: transparent;
+      border: 1px solid var.$lightE9-color;
+      color: var.$black-color;
+      border-radius: var.$rounded4;
+      min-width: 32px;
+      min-height: 38px;
+      font-weight: var.$font400;
+      @include FlexCenter;
+      padding: 5px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    &.active {
+      .page-link {
+        background-color: var.$primary-color;
+        color: var.$white-color;
+        border-color: var.$primary-color;
+      }
+    }
+    &.PrevBtn,
+    &.NextBtn {
+      min-width: 68px;
+    }
+    &.PrevBtn {
+      .page-link {
+        &:before {
+          content: "\F284";
+          font-family: var.$fontFamilybootstrapicon;
+          color: var.$primary-color;
+          margin-right: 3px;
+        }
+      }
+    }
+    &.NextBtn {
+      .page-link {
+        &:after {
+          content: "\F285";
+          font-family: var.$fontFamilybootstrapicon;
+          color: var.$primary-color;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}

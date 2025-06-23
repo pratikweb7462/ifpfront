@@ -1,0 +1,48 @@
+@mixin BackgroundCover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin BackgroundContain {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@mixin FlexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin FlexBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin ImgRealtive {
+  position: relative;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+@mixin ImgPadding {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var.$transition3sall;
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+@mixin PositionCenter{
+      position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}

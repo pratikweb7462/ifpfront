@@ -1,0 +1,125 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+.sectionTitle {
+        h3{
+            font-size: var(--font28);
+            line-height: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            span{
+                color: var.$darkskyblue-color;
+                margin-right: 20px;
+            }
+        }
+    }
+.contact{
+    .cardBox{
+        background: var.$navyblue-color;
+        padding: 35px 40px 35px 60px;
+        border-radius: 15px;
+        color: var.$white-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: 1024px) {
+            padding: 30px 35px 30px 40px;
+        }
+
+        @media only screen and (max-width: 992px) {
+            // display: block;
+            padding: 20px 25px ;
+        }
+
+        @media only screen and (max-width: 767px) {
+            display: block;
+        }
+
+        h4{
+            font-size: var(--font28);
+            line-height: 42px;
+            margin-bottom: 10px;
+            @media only screen and (max-width: 992px) {
+                line-height: 32px;
+                margin-bottom: 5px;
+            }
+        }
+        
+        p{
+            font-size: var(--font16);
+            line-height: 22px;
+
+            @media only screen and (max-width: 992px) {
+                padding-bottom: 10px;
+            }
+        }
+        .contactInfo, .links {
+            padding: 15px 0 0;
+            @media only screen and (max-width: 1024px) {
+                padding: 10px 0 0;
+            }
+            a {
+                display: block;
+                font-size: var(--font16);
+                line-height: 22px;
+                font-weight: 400;
+                color: var.$white-color;
+                margin-bottom: 10px;
+                @media only screen and (max-width: 1024px) {
+                    margin-bottom: 5px;
+                }
+                &:hover{
+                    color: var.$primary-color;
+                }
+
+                img {
+                    position: relative;
+                    top: 5px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .links {
+            a{
+                color: var.$primary-color;
+
+                &:hover {
+                    color: var.$primarylight-color;
+                }
+            }
+        }
+
+
+        .white-box {
+            background: var.$white-color;
+            padding: 20px;
+            border-radius: 10px;
+            width: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media only screen and (max-width: 1024px) {
+                width: 350px;
+            }
+
+            @media only screen and (max-width: 992px) {
+                // margin-top: 25px;
+                width: 230px;
+            }
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            img {
+                @media only screen and (max-width: 992px) {
+                    max-width: 60%;
+                }
+                @media only screen and (max-width: 767px) {
+                    max-width: 30%;
+                }
+            }
+        }
+    }
+}

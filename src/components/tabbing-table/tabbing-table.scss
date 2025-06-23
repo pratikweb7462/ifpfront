@@ -1,0 +1,67 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+
+.table-responsive{
+    padding: 15px;
+}
+
+.tableCustom  {
+//    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // box-shadow: var.$boxshadow3;
+    box-shadow: 0px 0px 25px 0px #0000001A;
+
+    background: var.$white-color;
+    padding: 10px;
+    width: 50%;
+    @media only screen and (max-width: 1024px) {
+        width: 100%;
+    }
+    tr{
+        border-bottom: 1px solid var.$BEBEBE-color;
+    td {
+    padding: 10px 25px 10px 35px; 
+    vertical-align: middle;
+    // border: 0px solid var.$BEBEBE-color;
+    font-size: var(--font18);
+    line-height: 32px;
+    font-weight: 500;
+    color: var.$black-color;
+    border-right: 1px solid var.$BEBEBE-color;
+   
+
+    &:last-child {
+       
+        border-right: 0;
+        // width: 35%;
+    }
+    // &:first-child {width: 45%;}
+    
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+    strong{
+        color: var.$black-color;
+        font-weight: 800;
+    }
+    a {
+        font-size: var(--font18);
+        line-height: 32px;
+        font-weight: 500;
+        color: var.$text-blue-color;
+        // padding-left: 5px;
+        img{
+            // top: 5px;
+    position: relative;
+    height: 32px;
+    left: 0;
+    margin-right: 10px;
+        }
+        &:hover{
+            color: var.$primary-color;
+        }
+    }
+  }
+
+ }

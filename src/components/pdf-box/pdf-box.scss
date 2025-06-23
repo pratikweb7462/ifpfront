@@ -1,0 +1,58 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+
+// PDF Box
+.PDFBoxRow {
+  // margin-top: -24px;
+  .PDFBoxGrid {
+    margin-top: 24px;
+    .PDFBox {
+      border-radius: var.$rounded8;
+      background-color: var.$white-color;
+      box-shadow: var.$boxshadow3;
+      padding: 26px 29px;
+      transition: var.$transition3sall;
+      @media (max-width: 1399px) {
+        padding: 26px 26px;
+      }
+      @media (max-width: 1199px) {
+        padding: 22px 22px;
+      }
+      @media (max-width: 991px) {
+        padding: 20px 20px;
+      }
+      @media (max-width: 575px) {
+        padding: 15px 15px;
+      }
+      .Validated {
+        padding-bottom: 5px;
+      }
+      .Thumb {
+        width: 45px;
+        height: 45px;
+        @media (max-width: 1199px) {
+          width: 40px;
+          height: 40px;
+        }
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .PDFBoxContent {
+        width: calc(100% - 45px);
+        padding-left: 14px;
+        @media (max-width: 1199px) {
+          width: calc(100% - 40px);
+          padding-left: 10px;
+        }
+      }
+      &:hover {
+        background-color: var.$navyblue-color;
+        color: var.$white-color;
+      }
+    }
+  }
+}

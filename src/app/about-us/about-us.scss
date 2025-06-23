@@ -1,0 +1,124 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+
+.IFP-About-Us {
+    padding: 60px 0;
+
+    h3{
+        font-size: var(--font28);
+        line-height: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: var(--font16);
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    .IFP-about-content {
+        padding-bottom: 20px;
+        padding-right: 30px;
+    }
+    .our-team { padding: 30px 30px 30px 0;
+
+    .teamGrid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .member-img {
+            background: var.$E9F0FE-color;
+            text-align: center;
+            padding: 20px 10px 0;
+            border-radius: 10px 10px 0 0;
+            width: 193px;
+            height: 193px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            img{
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .member-details {
+            padding: 10px 10px 10px 0;
+
+            h6{
+                font-size: var(--font16);
+                line-height: 24px;
+                font-weight: 700;
+                color: var.$darkskyblue-color;
+                margin-bottom: 0px;
+            }
+            span{
+                font-size: var(--font14);
+                line-height: 24px;
+                font-weight: 400;
+                color: var.$text-gray-color;
+
+            }
+        }
+    }
+    }
+
+    .IFP-help-you {
+        background: var.$F4F9FF-color;
+        padding: 20px;
+        border-radius: 8px;
+        .helpCard {
+            ul{
+                // margin-top: 10px;
+            li{padding: 15px 0;
+                border-bottom: 1px solid var.$CACACA-color;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    border-bottom: 0;
+                    
+                }
+            }
+            }
+            h5{
+                font-size: 20px;
+                line-height: 32px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            .card-wrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: start;
+                .card-img {
+                    max-width: 15%;
+                    flex: 0 0 15%;
+                }
+
+                .card-details {
+                    max-width: 80%;
+                    flex: 0 0 80%;
+
+                    h6{
+                        font-size: var(--font16);
+                        line-height: 20px;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                    span {
+                        font-size: var(--font14);
+                        line-height: 18px;
+                        font-weight: 400;
+                        display: block;
+                    }
+                }
+
+            }
+        }
+
+    }
+    
+}

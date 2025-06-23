@@ -1,0 +1,80 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+// ImportantLinkBox
+.ImportantLinkRow {
+  margin-top: -24px;
+  .ImportantLinkGrid {
+    margin-bottom: 24px;
+    .ImportantLinkBox {
+      border-radius: var.$rounded8;
+      background-color: var.$white-color;
+      box-shadow: var.$boxshadow3;
+      padding: 30px 26px;
+      transition: var.$transition3sall;
+      border-bottom: 3px solid;
+      border-bottom-color:transparent;
+      @media (max-width: 1399px) {
+        padding: 26px 26px;
+      }
+      @media (max-width: 1199px) {
+        padding: 22px 22px;
+      }
+      @media (max-width: 991px) {
+        padding: 20px 20px;
+      }
+      @media (max-width: 575px) {
+        padding: 15px 15px;
+      }
+      .Thumb {
+        width: 50px;
+        @media (max-width: 1399px) {
+          width: 50px;
+        }
+        @media (max-width: 1199px) {
+          width: 48px;
+        }
+        @media (max-width: 991px) {
+          width: 45px;
+        }
+        @media (max-width: 575px) {
+          width: 40px;
+        }
+        img {
+          object-fit: contain;
+          width: 100%;
+          transition: var.$transition3sall;
+        }
+      }
+      .ImportantLinkBoxContent {
+        width: calc(100% - 50px);
+        padding-left: 20px;
+        @media (max-width: 1399px) {
+          width: calc(100% - 50px);
+          padding-left: 18px;
+        }
+        @media (max-width: 1199px) {
+          width: calc(100% - 48px);
+          padding-left: 16px;
+        }
+        @media (max-width: 991px) {
+          width: calc(100% - 45px);
+          padding-left: 14px;
+        }
+        @media (max-width: 575px) {
+          width: calc(100% - 40px);
+          padding-left: 10px;
+        }
+      }
+      &:hover {
+        background-color: var.$navyblue-color;
+        color: var.$white-color;
+        .Thumb {
+          img{
+            filter: invert(1);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@use "../../assets/styles/var";
+@import "../../assets/styles/_mixin.scss";
+
+.InnerBanner {
+  background-color: var.$navyblue-color;
+
+  .ContentPartGrid {
+    min-height: 377px;
+    padding-bottom: 60px;
+    @media screen and (max-width: 1399px) {
+      padding-bottom: 50px;
+    }
+    @media screen and (max-width: 1199px) {
+      min-height: 333px;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+    @media screen and (max-width: 991px) {
+      min-height: 300px;
+      min-height: auto;
+      padding-bottom: 40px;
+      padding-top: 40px;
+    }
+    @media screen and (max-width: 575px) {
+      min-height: auto;
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+
+    .ContentPart {
+      .Heading,
+      .SubText,
+      .Note {
+        color: var.$white-color;
+        a {
+          color: var.$green-color;
+          font-weight: var.$font600;
+          &:hover {
+            color: var.$primary-color;
+          }
+        }
+      }
+      .SubText {
+        margin: 16px 0px 16px;
+      }
+      .Note {
+        margin: 16px 0px 0px;
+      }
+    }
+  }
+  form {
+    border-radius: var.$rounded8;
+    max-width: 710px;
+    input,
+    select,
+    button {
+      border-radius: 0;
+      background-color: var.$white-color;
+      min-height: 60px;
+      @media (max-width: 767px) {
+        min-height: 45px;
+      }
+    }
+
+    input.form-control {
+      width: calc(100% - 350px);
+      padding-left: 45px;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-position: 5% 50%;
+      background-image: url("../../../public/images/search-icon.svg");
+      @media (max-width: 767px) {
+        width: 100%;
+        background-position: 3% 50%;
+        padding-left: 40px;
+        margin: 10px 0px 10px;
+        border-radius: var.$rounded8;
+      }
+    }
+    select {
+      width: 200px;
+      background-color: var.$F3F3F3-color;
+      @media (max-width: 767px) {
+        width: 100%;
+        border-radius: var.$rounded8;
+      }
+    }
+    .orange {
+      width: 150px;
+      padding: 5px 10px;
+      font-size: var(--font16);
+      font-weight: var.$font600;
+      text-transform: uppercase;
+      border-radius: 0px;
+      @media (max-width: 767px) {
+        border-radius: var.$rounded8;
+        width: auto;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus-visible {
+        background-color: var.$primarylight-color;
+        border-color: var.$primarylight-color;
+        color: var.$white-color;
+      }
+    }
+  }
+  .BannerShape {
+    animation: rotateInfinitely 80s linear infinite;
+    @keyframes rotateInfinitely {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .BannerMap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    z-index: 1;
+    @media screen and (max-width: 1199px) {
+      max-width: 110px;
+    }
+  }
+}
